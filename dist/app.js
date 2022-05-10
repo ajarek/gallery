@@ -1,28 +1,8 @@
-"use strict";
+import { Slider } from "./class-slider.js";
 const images = document.querySelectorAll('img');
 const cards = document.querySelectorAll('.card');
 const container = document.querySelector('.container');
-console.log('images');
-class Slider {
-    constructor(images) {
-        this.images = images;
-    }
-    showImage(src) {
-        const div = document.createElement('div');
-        div.classList.add('cardSlider');
-        div.innerHTML = `<img src="images/${src}.jpeg" alt="">`;
-        container.classList.add('slider');
-        container.appendChild(div);
-    }
-    showCloseBtn() {
-        const closeBtn = document.createElement('button');
-        closeBtn.classList.add('closeBtn');
-        closeBtn.innerHTML = `&#215;`;
-        container.setAttribute('position', 'relative');
-        container.appendChild(closeBtn);
-    }
-}
-let slider = new Slider(`images`);
+let slider = new Slider(`images`, container);
 function displayImage(e) {
     const image = e.target;
     slider.showImage(`${image.dataset.src}`);

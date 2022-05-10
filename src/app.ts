@@ -1,30 +1,13 @@
+import { Slider } from "./class-slider.js";
+
 const images = document.querySelectorAll('img') as NodeListOf<HTMLImageElement>
 const cards = document.querySelectorAll('.card') as NodeListOf<HTMLElement>
 const container = document.querySelector('.container') as HTMLElement
-console.log('images')
-class Slider {
-    images: string
-    constructor(images: string) {
-        this.images = images
-    }
-    showImage(src: string) {
-        const div = document.createElement('div')
-        div.classList.add('cardSlider')
-        div.innerHTML = `<img src="images/${src}.jpeg" alt="">`
-        container.classList.add('slider')
-        container.appendChild(div)       
-}
-showCloseBtn() {
-    const closeBtn = document.createElement('button')
-    closeBtn.classList.add('closeBtn')
-    closeBtn.innerHTML = `&#215;`
-    container.setAttribute('position', 'relative')
-    container.appendChild(closeBtn)
-}
 
-}
 
-let slider= new Slider(`images`)
+
+let slider= new Slider(`images`, container)
+
 
 function displayImage(e:Event){
 
