@@ -2,6 +2,7 @@
 const images = document.querySelectorAll('img');
 const cards = document.querySelectorAll('.card');
 const container = document.querySelector('.container');
+console.log('images');
 class Slider {
     constructor(images) {
         this.images = images;

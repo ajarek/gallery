@@ -1,7 +1,7 @@
 const images = document.querySelectorAll('img') as NodeListOf<HTMLImageElement>
 const cards = document.querySelectorAll('.card') as NodeListOf<HTMLElement>
 const container = document.querySelector('.container') as HTMLElement
-
+console.log('images')
 class Slider {
     images: string
     constructor(images: string) {
@@ -58,4 +58,5 @@ function closeImage(){
 images.forEach(image => {
     image.addEventListener('click', displayImage)
 })
+
 
