@@ -57,3 +57,30 @@ body{
     height: 100vh;
     background: #000;
 }
+.btnRightSlider,.btnLeftSlider{
+    position: absolute;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    background: transparent;
+}
+.btnRightSlider{
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+.btnLeftSlider{
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+.slider img{
+    width: 100%;
+}
+.titleImage{
+    position: absolute;
+    bottom:10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
